@@ -46,28 +46,38 @@
                     <div id="kc-form-options">
                         <#if realm.rememberMe && !usernameEditDisabled??>
                             <div class="checkbox">
-                                <label>
-                                    <#if login.rememberMe??>
-                                        <input tabindex="3" id="rememberMe" name="rememberMe" type="checkbox" checked> ${msg("rememberMe")}
-                                    <#else>
-                                        <input tabindex="3" id="rememberMe" name="rememberMe" type="checkbox"> ${msg("rememberMe")}
-                                    </#if>
-                                </label>
+                                <#if login.rememberMe??>
+                                <div class="mdc-checkbox">
+                                    <input tabindex="3" id="rememberMe" name="rememberMe" type="checkbox" class="mdc-checkbox__native-control" checked>
+                                    <div class="mdc-checkbox__background">
+                                        <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                                            <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                                        </svg>
+                                        <div class="mdc-checkbox__mixedmark"></div>
+                                    </div>
+                                </div>
+                                <label for="rememberMe">${msg("rememberMe")}</label>
+                                <#else>
+                                <div class="mdc-checkbox">
+                                    <input tabindex="3" id="rememberMe" name="rememberMe" type="checkbox" class="mdc-checkbox__native-control">
+                                    <div class="mdc-checkbox__background">
+                                        <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                                            <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                                        </svg>
+                                        <div class="mdc-checkbox__mixedmark"></div>
+                                    </div>
+                                </div>
+                                <label for="rememberMe">${msg("rememberMe")}</label>
+                                </#if>
                             </div>
                         </#if>
                         </div>
-                        <div class="${properties.kcFormOptionsWrapperClass!}">
-                            <#if realm.resetPasswordAllowed>
-                                <span><a tabindex="5" href="${url.loginResetCredentialsUrl}">${msg("doForgotPassword")}</a></span>
-                            </#if>
-                        </div>
+                </div>
 
-                  </div>
-
-                  <div id="kc-form-buttons" class="${properties.kcFormGroupClass!} login-action login-field">
-                    <button class="mdc-button">forget?</button>
+                <div id="kc-form-buttons" class="${properties.kcFormGroupClass!} login-action login-field">
+                    <span class="${properties.kcFormOptionsWrapperClass!}"><a class="mdc-button" href="${url.loginResetCredentialsUrl}">${msg("doForgotPassword")}</a></span>
                     <input tabindex="4" class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!} mdc-button mdc-button--raised" name="login" id="kc-login" type="submit" value="${msg("doLogIn")}"/>
-                  </div>
+                </div>
             </form>
             <script src="${url.resourcesPath}/js/login.js?${.now?long}"></script>
         </#if>

@@ -1,36 +1,47 @@
 @import url('./mario.css');
 
 body {
-    margin: 0;
-  }
-  .login-container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .login-card {
-    width: 400px;
-    padding: 20px;
-    margin-top: -30%;
-  }
-  #login-card .login-headline {
-    text-align: center;
-  }
-  #login-card .login-action {
-    display: flex;
-    justify-content: space-between;
-  }
-  #login-card .login-field {
-    margin: 15px 0;
-    width: 100%;
-  }
-  #login-card #toggle {
-    outline: 0;
-  }
+  margin: 0;
+}
+.login-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-card {
+  width: 400px;
+  padding: 20px;
+  margin-top: -30%;
+}
+#login-card .login-headline {
+  text-align: center;
+}
+#login-card .login-action {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+#login-card .login-action span {
+  order: 2;
+}
+#login-card .login-field {
+  margin: 15px 0;
+  width: 100%;
+}
+#login-card #toggle {
+  outline: 0;
+}
 
-  /* keycloak headerId */
-  #kc-header {
-    display: none;
-  }
+
+
+/* keycloak headerId */
+#kc-header {
+  display: none;
+}
+
+#kc-form-options .checkbox {
+  display: flex;
+  align-items: center;
+}
