@@ -1,3 +1,5 @@
+@import url('./mario.css');
+
 body {
     margin: 0;
   }
@@ -11,7 +13,7 @@ body {
   .login-card {
     width: 400px;
     padding: 20px;
-    margin: auto;
+    margin-top: -30%;
   }
   #login-card .login-headline {
     text-align: center;
@@ -23,4 +25,12 @@ body {
   #login-card .login-field {
     margin: 15px 0;
     width: 100%;
+  }
+  #login-card #toggle {
+    outline: 0;
+  }
+
+  /* keycloak headerId */
+  #kc-header {
+    display: none;
   }

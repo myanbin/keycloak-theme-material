@@ -1,7 +1,7 @@
 <#import "template.ftl" as layout>
 <@layout.registrationLayout displayInfo=social.displayInfo displayWide=(realm.password && social.providers??); section>
     <#if section = "header">
-        ${msg("doLogIn")}
+        <#--  ${msg("doLogIn")}  -->
     <#elseif section = "form">
     <div id="login-card" class="login-card mdc-card mdc-elevation--z12">
     <div id="kc-form" <#if realm.password && social.providers??>class="${properties.kcContentWrapperClass!}"</#if>>
@@ -15,7 +15,6 @@
                 </div>
                 
                 <div class="${properties.kcFormGroupClass!} mdc-text-field mdc-text-field--outlined login-field">
-                    
                     <#if usernameEditDisabled??>
                         <input tabindex="1" id="username" class="${properties.kcInputClass!} mdc-text-field__input" name="username" value="${(login.username!'')}" type="text" disabled />
                     <#else>
@@ -31,7 +30,8 @@
                     </div>
                 </div>
 
-                <div class="${properties.kcFormGroupClass!} mdc-text-field mdc-text-field--outlined login-field">
+                <div class="${properties.kcFormGroupClass!} mdc-text-field mdc-text-field--outlined mdc-text-field--with-trailing-icon login-field">
+                    <i id="toggle" class="material-icons mdc-text-field__icon" tabindex="0" role="button">visibility_off</i>
                     <input tabindex="2" id="password" class="${properties.kcInputClass!} mdc-text-field__input" name="password" type="password" autocomplete="off" />
                     <div class="mdc-notched-outline">
                         <div class="mdc-notched-outline__leading"></div>
