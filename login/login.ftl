@@ -3,23 +3,43 @@
     <#if section = "header">
         ${msg("doLogIn")}
     <#elseif section = "form">
+    <div id="login-card" class="login-card mdc-card mdc-elevation--z12">
     <div id="kc-form" <#if realm.password && social.providers??>class="${properties.kcContentWrapperClass!}"</#if>>
       <div id="kc-form-wrapper" <#if realm.password && social.providers??>class="${properties.kcFormSocialAccountContentClass!} ${properties.kcFormSocialAccountClass!}"</#if>>
         <#if realm.password>
             <form id="kc-form-login" onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
-                <div class="${properties.kcFormGroupClass!}">
-                    <label for="username" class="${properties.kcLabelClass!}"><#if !realm.loginWithEmailAllowed>${msg("username")}<#elseif !realm.registrationEmailAsUsername>${msg("usernameOrEmail")}<#else>${msg("email")}</#if></label>
-
+                <!-- headline -->
+                <div class="login-headline">
+                    <h1 class="mdc-typography mdc-typography--headline4">Login In</h1>
+                    <h3 class="mdc-typography mdc-typography--subtitle1">xinhua tech center</h3>
+                </div>
+                
+                <div class="${properties.kcFormGroupClass!} mdc-text-field mdc-text-field--outlined login-field">
+                    
                     <#if usernameEditDisabled??>
-                        <input tabindex="1" id="username" class="${properties.kcInputClass!}" name="username" value="${(login.username!'')}" type="text" disabled />
+                        <input tabindex="1" id="username" class="${properties.kcInputClass!} mdc-text-field__input" name="username" value="${(login.username!'')}" type="text" disabled />
                     <#else>
-                        <input tabindex="1" id="username" class="${properties.kcInputClass!}" name="username" value="${(login.username!'')}"  type="text" autofocus autocomplete="off" />
+                        <input tabindex="1" id="username" class="${properties.kcInputClass!} mdc-text-field__input" name="username" value="${(login.username!'')}"  type="text" autofocus autocomplete="off" />
                     </#if>
+
+                    <div class="mdc-notched-outline">
+                        <div class="mdc-notched-outline__leading"></div>
+                        <div class="mdc-notched-outline__notch">
+                            <label for="username" class="${properties.kcLabelClass!} mdc-floating-label"><#if !realm.loginWithEmailAllowed>${msg("username")}<#elseif !realm.registrationEmailAsUsername>${msg("usernameOrEmail")}<#else>${msg("email")}</#if></label>
+                        </div>
+                        <div class="mdc-notched-outline__trailing"></div>
+                    </div>
                 </div>
 
-                <div class="${properties.kcFormGroupClass!}">
-                    <label for="password" class="${properties.kcLabelClass!}">${msg("password")}</label>
-                    <input tabindex="2" id="password" class="${properties.kcInputClass!}" name="password" type="password" autocomplete="off" />
+                <div class="${properties.kcFormGroupClass!} mdc-text-field mdc-text-field--outlined login-field">
+                    <input tabindex="2" id="password" class="${properties.kcInputClass!} mdc-text-field__input" name="password" type="password" autocomplete="off" />
+                    <div class="mdc-notched-outline">
+                        <div class="mdc-notched-outline__leading"></div>
+                        <div class="mdc-notched-outline__notch">
+                            <label for="password" class="${properties.kcLabelClass!} mdc-floating-label">${msg("password")}</label>
+                        </div>
+                        <div class="mdc-notched-outline__trailing"></div>
+                    </div>
                 </div>
 
                 <div class="${properties.kcFormGroupClass!} ${properties.kcFormSettingClass!}">
@@ -44,10 +64,12 @@
 
                   </div>
 
-                  <div id="kc-form-buttons" class="${properties.kcFormGroupClass!}">
-                    <input tabindex="4" class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}" name="login" id="kc-login" type="submit" value="${msg("doLogIn")}"/>
+                  <div id="kc-form-buttons" class="${properties.kcFormGroupClass!} login-action login-field">
+                    <button class="mdc-button">forget?</button>
+                    <input tabindex="4" class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!} mdc-button mdc-button--raised" name="login" id="kc-login" type="submit" value="${msg("doLogIn")}"/>
                   </div>
             </form>
+            <script src="${url.resourcesPath}/js/login.js?${.now?long}"></script>
         </#if>
         </div>
         <#if realm.password && social.providers??>
@@ -60,6 +82,7 @@
             </div>
         </#if>
       </div>
+    </div>
     <#elseif section = "info" >
         <#if realm.password && realm.registrationAllowed && !usernameEditDisabled??>
             <div id="kc-registration">
