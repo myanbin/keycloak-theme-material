@@ -9,3 +9,19 @@ Coding with following code:
 > **ATTENTION**
 >
 > When add or remove files, need restart the app
+
+
+Change `../base/login/template.ftl` as follow to disable theme cache:
+
+```html
+<#if properties.styles?has_content>
+    <#list properties.styles?split(' ') as style>
+        <link href="${url.resourcesPath}/${style}?${.now?long}" rel="stylesheet" />
+    </#list>
+</#if>
+<#if properties.scripts?has_content>
+    <#list properties.scripts?split(' ') as script>
+        <script src="${url.resourcesPath}/${script}?${.now?long}" type="text/javascript"></script>
+    </#list>
+</#if>
+```
