@@ -1,0 +1,1 @@
+console.log('%cIt works!', 'color: green; font-size: 4em;');
