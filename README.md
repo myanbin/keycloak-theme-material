@@ -1,5 +1,7 @@
 # How to write a Keycloak theme
 
+![keycloak-theme-material](https://user-images.githubusercontent.com/2127462/55537350-8ed46480-56ee-11e9-9776-798b7277aa9a.png)
+
 Coding with following code:
 
 1. Put css, js, img to `resources` directory
