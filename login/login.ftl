@@ -10,8 +10,8 @@
             <form id="kc-form-login" onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
                 <!-- headline -->
                 <div class="login-headline">
-                    <h1 class="mdc-typography mdc-typography--headline4">Login In</h1>
-                    <h3 class="mdc-typography mdc-typography--subtitle1">xinhua tech center</h3>
+                    <h1 class="mdc-typography mdc-typography--headline4">登录 XINHUA.DEV</h1>
+                    <h3 class="mdc-typography mdc-typography--subtitle1"></h3>
                 </div>
                 
                 <div class="${properties.kcFormGroupClass!} mdc-text-field mdc-text-field--outlined login-field">
