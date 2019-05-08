@@ -10,15 +10,15 @@
             <form id="kc-form-login" onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
                 <!-- headline -->
                 <div class="login-headline">
-                    <h1 class="mdc-typography mdc-typography--headline4">登录 XINHUA.DEV</h1>
-                    <h3 class="mdc-typography mdc-typography--subtitle1"></h3>
+                    <h1 class="mdc-typography mdc-typography--headline4">使用 DevPass 登录</h1>
+                    <h3 class="mdc-typography mdc-typography--subtitle1">没有 DevPass 帐号？请联系您的主管部门开通。</h3>
                 </div>
                 
                 <div class="${properties.kcFormGroupClass!} mdc-text-field mdc-text-field--outlined login-field">
                     <#if usernameEditDisabled??>
                         <input tabindex="1" id="username" class="${properties.kcInputClass!} mdc-text-field__input" name="username" value="${(login.username!'')}" type="text" disabled />
                     <#else>
-                        <input tabindex="1" id="username" class="${properties.kcInputClass!} mdc-text-field__input" name="username" value="${(login.username!'')}"  type="text" autofocus autocomplete="off" />
+                        <input tabindex="1" id="username" class="${properties.kcInputClass!} mdc-text-field__input" name="username" value="${(login.username!'')}"  type="text" autocomplete="off" />
                     </#if>
 
                     <div class="mdc-notched-outline">
@@ -31,8 +31,9 @@
                 </div>
 
                 <div class="${properties.kcFormGroupClass!} mdc-text-field mdc-text-field--outlined mdc-text-field--with-trailing-icon login-field">
-                    <i id="toggle" class="material-icons mdc-text-field__icon" tabindex="0" role="button">visibility_off</i>
+                    <i id="password-toggle" class="material-icons mdc-text-field__icon" tabindex="0" role="button">visibility_off</i>
                     <input tabindex="2" id="password" class="${properties.kcInputClass!} mdc-text-field__input" name="password" type="password" autocomplete="off" />
+                    
                     <div class="mdc-notched-outline">
                         <div class="mdc-notched-outline__leading"></div>
                         <div class="mdc-notched-outline__notch">

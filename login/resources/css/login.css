@@ -1,4 +1,4 @@
-@import url('./xinhuadev.css?11');
+@import url('./xinhuadev.css');
 
 body {
   margin: 0;
@@ -11,8 +11,8 @@ body {
   align-items: center;
 }
 .login-card {
-  width: 400px;
-  padding: 20px;
+  width: 450px;
+  padding: 30px;
   margin-top: -30%;
 }
 #login-card .login-headline {
@@ -34,7 +34,13 @@ body {
   outline: 0;
 }
 
-
+#captcha-toggle {
+  bottom: 3px;
+  right: 3px;
+}
+#captcha-toggle img {
+  height: 50px;
+}
 
 /* keycloak headerId */
 #kc-header {
