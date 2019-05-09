@@ -7,7 +7,7 @@
         <form id="kc-reset-password-form" class="${properties.kcFormClass!}" action="${url.loginAction}" method="post">
             <div class="login-headline">
                 <h1 class="mdc-typography mdc-typography--headline4">忘记密码</h1>
-                <h3 class="mdc-typography mdc-typography--subtitle1">输入您的用户名和邮箱，我们会给您发送一封含有重置密码链接的邮件。</h3>
+                <h3 class="mdc-typography mdc-typography--subtitle1">输入您的电子邮箱，我们会给您发送一封含有重置密码链接的邮件。</h3>
             </div>
             
             <div class="${properties.kcFormGroupClass!} mdc-text-field mdc-text-field--outlined login-field">
@@ -16,7 +16,7 @@
                 <div class="mdc-notched-outline">
                     <div class="mdc-notched-outline__leading"></div>
                     <div class="mdc-notched-outline__notch">
-                      <label for="username" class="${properties.kcLabelClass!} mdc-floating-label"><#if !realm.loginWithEmailAllowed>${msg("username")}<#elseif !realm.registrationEmailAsUsername>${msg("usernameOrEmail")}<#else>${msg("email")}</#if></label>
+                      <label for="username" class="${properties.kcLabelClass!} mdc-floating-label">电子邮箱</label>
                     </div>
                     <div class="mdc-notched-outline__trailing"></div>
                 </div>

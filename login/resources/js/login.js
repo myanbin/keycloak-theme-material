@@ -33,13 +33,16 @@ submitButton && submitButton.addEventListener("click", function(event) {
         captcha: document.querySelector("#captcha").value
     };
     console.log(data);
-    var obj = new XMLHttpRequest();
-    obj.open("POST", "//xinhua.dev/auth/forgot", true);
-    obj.setRequestHeader("Content-type", "application/x-www-form-urlencoded"); // 发送信息至服务器时内容编码类型
-    obj.onreadystatechange = function () {
-        if (obj.readyState == 4 && (obj.status == 200 || obj.status == 304)) {  // 304未修改
-            fn.call(this, obj.responseText);
-        }
-    };
-    obj.send(data);
+
+    var url = '//xinhua.dev/auth/forgot';
+
+    fetch(url, {
+        method: 'POST', // or 'PUT'
+        body: JSON.stringify(data), // data can be `string` or {object}!
+        headers: new Headers({
+            'Content-Type': 'application/json'
+        })
+    }).then(res => res.json())
+    .catch(error => console.error('Error: ', error))
+    .then(response => console.log('Success: ', response));
 });
