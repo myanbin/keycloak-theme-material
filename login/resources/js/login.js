@@ -1,27 +1,36 @@
 console.log("%cIt works!", "color: green; font-size: 4em;");
 
-const textFields = document.querySelectorAll(".mdc-text-field");
+var textFields = document.querySelectorAll(".mdc-text-field");
 for (let textField of textFields) {
     mdc.textField.MDCTextField.attachTo(textField);
 }
 
 // 密码隐藏与显示的切换逻辑
-let passwordHidden = true;
-const passwordInput = document.querySelector("#password");
-const passwordToggle = document.querySelector("#password-toggle");
+var visibility = true;
+var passwordField = document.querySelector("#password");
+var visibilityToggler = document.querySelector("#password-toggle");
 
-if (passwordInput && passwordToggle) {
-    passwordToggle.addEventListener("click", function(event) {
-        if (passwordHidden === true) {
-            passwordInput.type = "text";
-            passwordToggle.innerHTML = "visibility";
-            passwordHidden = !passwordHidden;
-        } else {
-            passwordInput.type = "password";
-            passwordToggle.innerHTML = "visibility_off";
-            passwordHidden = !passwordHidden;
-        }
-    });
-}
+passwordField && visibilityToggler && visibilityToggler.addEventListener("click", function(event) {
+    if (visibility === true) {
+        passwordField.type = "text";
+        visibilityToggler.innerHTML = "visibility";
+        visibility = !visibility;
+    } else {
+        passwordField.type = "password";
+        visibilityToggler.innerHTML = "visibility_off";
+        visibility = !visibility;
+    }
+});
+
 
 // 重置密码逻辑
+var submitButton = document.querySelector("#submit-button");
+
+submitButton && submitButton.addEventListener("click", function(event) {
+    event.preventDefault();
+    var data = {
+        mail: document.querySelector("#captcha").value,
+        captcha: document.querySelector("#captcha").value
+    };
+    console.log(data);
+});

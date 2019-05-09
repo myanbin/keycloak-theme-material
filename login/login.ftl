@@ -3,7 +3,7 @@
     <#if section = "header">
         <#--  ${msg("doLogIn")}  -->
     <#elseif section = "form">
-    <div id="login-card" class="login-card mdc-card mdc-elevation--z12">
+    <div id="login-card" class="login-card mdc-card mdc-elevation--z1">
     <div id="kc-form" <#if realm.password && social.providers??>class="${properties.kcContentWrapperClass!}"</#if>>
       <div id="kc-form-wrapper" <#if realm.password && social.providers??>class="${properties.kcFormSocialAccountContentClass!} ${properties.kcFormSocialAccountClass!}"</#if>>
         <#if realm.password>
@@ -31,7 +31,7 @@
                 </div>
 
                 <div class="${properties.kcFormGroupClass!} mdc-text-field mdc-text-field--outlined mdc-text-field--with-trailing-icon login-field">
-                    <i id="password-toggle" class="material-icons mdc-text-field__icon" tabindex="0" role="button">visibility_off</i>
+                    <i id="password-toggle" class="material-icons mdc-text-field__icon" role="button">visibility_off</i>
                     <input tabindex="2" id="password" class="${properties.kcInputClass!} mdc-text-field__input" name="password" type="password" autocomplete="off" />
                     
                     <div class="mdc-notched-outline">
