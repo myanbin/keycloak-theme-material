@@ -23,7 +23,7 @@
             </div>
 
             <div class="${properties.kcFormGroupClass!} mdc-text-field mdc-text-field--outlined mdc-text-field--with-trailing-icon login-field">
-                <i id="captcha-toggle" class="material-icons mdc-text-field__icon" role="button"><img src="http://xinhuadev.com/api/captcha"></i>
+                <i id="captcha-toggle" class="material-icons mdc-text-field__icon" role="button"><img src="//xinhua.dev/api/captcha"></i>
                 <input tabindex="2" type="text" id="captcha" name="captcha" class="${properties.kcInputClass!} mdc-text-field__input" autocomplete="off"/>
 
                 <div class="mdc-notched-outline">
