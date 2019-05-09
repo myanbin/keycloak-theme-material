@@ -7,7 +7,7 @@
         <form id="kc-reset-password-form" class="${properties.kcFormClass!}" action="${url.loginAction}" method="post">
             <div class="login-headline">
                 <h1 class="mdc-typography mdc-typography--headline4">忘记密码</h1>
-                <h3 class="mdc-typography mdc-typography--subtitle1">输入您的用户名和邮箱，我们会发送一封带有设置新密码步骤的邮件到您的邮箱。</h3>
+                <h3 class="mdc-typography mdc-typography--subtitle1">输入您的用户名和邮箱，我们会给您发送一封含有重置密码链接的邮件。</h3>
             </div>
             
             <div class="${properties.kcFormGroupClass!} mdc-text-field mdc-text-field--outlined login-field">

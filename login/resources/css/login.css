@@ -1,5 +1,9 @@
 @import url('./xinhuadev.css');
 
+:root {
+  --mdc-theme-primary: #3f51b5;
+}
+
 body {
   margin: 0;
 }

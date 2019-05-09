@@ -10,7 +10,7 @@
             <form id="kc-form-login" onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
                 <!-- headline -->
                 <div class="login-headline">
-                    <h1 class="mdc-typography mdc-typography--headline4">使用 DevPass 登录</h1>
+					<h1 class="mdc-typography mdc-typography--headline4">新华开发平台</h1>
                     <h3 class="mdc-typography mdc-typography--subtitle1">没有 DevPass 帐号？请联系您的主管部门开通。</h3>
                 </div>
                 
