@@ -30,7 +30,7 @@
                 </div>
 
                 <div class="${properties.kcFormGroupClass!} mdc-text-field mdc-text-field--outlined mdc-text-field--with-trailing-icon login-field">
-                    <i id="password-toggle" class="material-icons mdc-text-field__icon" role="button">visibility_off</i>
+                    <i tabindex="0" id="password-toggle" class="material-icons mdc-text-field__icon" role="button">visibility_off</i>
                     <input tabindex="2" id="password" class="${properties.kcInputClass!} mdc-text-field__input" name="password" type="password" autocomplete="off" />
                     
                     <div class="mdc-notched-outline">
