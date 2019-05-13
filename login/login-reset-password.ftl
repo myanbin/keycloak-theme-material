@@ -2,16 +2,17 @@
 <@layout.registrationLayout displayInfo=true; section>
     <#if section = "header">
         <#--  ${msg("emailForgotTitle")}  -->
+        新华社技术局出品
     <#elseif section = "form">
-    <div id="login-card" class="login-card mdc-card mdc-elevation--z1">
+    <div id="login-card" class="login-card">
         <form id="kc-reset-password-form" class="${properties.kcFormClass!}" action="${url.loginAction}" method="post">
             <div class="login-headline">
                 <h1 class="mdc-typography mdc-typography--headline4">忘记密码</h1>
-                <h3 class="mdc-typography mdc-typography--subtitle1">输入您的电子邮箱，我们会给您发送一封含有重置密码链接的邮件。</h3>
+                <h3 id="login-message" class="mdc-typography mdc-typography--subtitle1">请输入您想要找回的 DevPass 帐号</h3>
             </div>
             
             <div class="${properties.kcFormGroupClass!} mdc-text-field mdc-text-field--outlined login-field">
-                <input tabindex="1" type="text" id="username" name="username" class="${properties.kcInputClass!} mdc-text-field__input" autocomplete="off"/>
+                <input tabindex="1" type="text" id="mail" name="mail" class="${properties.kcInputClass!} mdc-text-field__input" autocomplete="off"/>
 
                 <div class="mdc-notched-outline">
                     <div class="mdc-notched-outline__leading"></div>
@@ -23,7 +24,7 @@
             </div>
 
             <div class="${properties.kcFormGroupClass!} mdc-text-field mdc-text-field--outlined mdc-text-field--with-trailing-icon login-field">
-                <i id="captcha-toggle" class="material-icons mdc-text-field__icon" role="button"><img src="//xinhua.dev/api/captcha"></i>
+                <i tabindex="0" id="reload-captcha" class="material-icons mdc-text-field__icon" role="button"><img src="//xinhua.dev/api/captcha"></i>
                 <input tabindex="2" type="text" id="captcha" name="captcha" class="${properties.kcInputClass!} mdc-text-field__input" autocomplete="off"/>
 
                 <div class="mdc-notched-outline">

@@ -1,17 +1,16 @@
 <#import "template.ftl" as layout>
-<@layout.registrationLayout displayInfo=social.displayInfo displayWide=(realm.password && social.providers??) displayMessage=false; section>
+<@layout.registrationLayout displayInfo=social.displayInfo displayWide=(realm.password && social.providers??); section>
     <#if section = "header">
-        <#--  ${msg("doLogIn")}  -->
+        新华社技术局出品
     <#elseif section = "form">
-    <div id="login-card" class="login-card mdc-card mdc-elevation--z1">
-    <div id="kc-form" <#if realm.password && social.providers??>class="${properties.kcContentWrapperClass!}"</#if>>
+    <div id="kc-form" class="login-card" <#if realm.password && social.providers??>class="${properties.kcContentWrapperClass!}"</#if>>
       <div id="kc-form-wrapper" <#if realm.password && social.providers??>class="${properties.kcFormSocialAccountContentClass!} ${properties.kcFormSocialAccountClass!}"</#if>>
         <#if realm.password>
             <form id="kc-form-login" onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
                 <!-- headline -->
                 <div class="login-headline">
 					<h1 class="mdc-typography mdc-typography--headline4">新华开发平台</h1>
-                    <h3 class="mdc-typography mdc-typography--subtitle1">没有 DevPass 帐号？请联系您的主管部门开通。</h3>
+                    <h3 id="login-message" class="mdc-typography mdc-typography--subtitle1">没有 DevPass 帐号？请联系平台管理员开通。</h3>
                 </div>
                 
                 <div class="${properties.kcFormGroupClass!} mdc-text-field mdc-text-field--outlined login-field">
