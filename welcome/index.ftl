@@ -23,7 +23,7 @@
  
 <html>
 <head>
-    <title>欢迎进入 ${productNameFull}</title>
+    <title>欢迎进入 新华开发平台</title>
 
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -43,7 +43,7 @@
   <div class="row">
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
       <div class="welcome-header">
-        <h1>欢迎进入 <strong>${productNameFull}</strong></h1>
+        <h1>欢迎进入 <strong>新华开发平台</strong></h1>
       </div>
       <div class="row">
         <div class="col-xs-12 col-sm-12">
@@ -88,9 +88,9 @@
                 </form>
             </#if>
             <div class="welcome-primary-link">
-              <h3><a href="https://xinhua.dev/"><img src="welcome-content/user.png">${productNameFull} <i class="fa fa-angle-right link" aria-hidden="true"></i></a></h3>
+              <h3><a href="https://xinhua.dev/"><img src="welcome-content/user.png">新华开发平台 <i class="fa fa-angle-right link" aria-hidden="true"></i></a></h3>
               <div class="description">
-                您好！请从这里进入 ${productNameFull}，开启您的开发之旅。
+                您好！请从这里进入 新华开发平台，开启您的开发之旅。
               </div>
             </div>
           </div>
