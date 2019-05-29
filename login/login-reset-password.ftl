@@ -2,7 +2,6 @@
 <@layout.registrationLayout displayInfo=true; section>
     <#if section = "header">
         <#--  ${msg("emailForgotTitle")}  -->
-        新华社技术局出品
     <#elseif section = "form">
     <div id="login-card" class="login-card">
         <form id="kc-reset-password-form" class="${properties.kcFormClass!}" action="${url.loginAction}" method="post">
