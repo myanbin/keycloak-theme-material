@@ -52,7 +52,7 @@
                 </div>
             </div>
         </#if>
-        <h1 id="kc-page-title"><#nested "header"></h1>
+        <#--  <h1 id="kc-page-title"><#nested "header"></h1>  -->
       </header>
       <div id="kc-content">
         <div id="kc-content-wrapper">
