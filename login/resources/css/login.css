@@ -79,3 +79,27 @@ body {
 .alert-success {
   color: #388e3c;
 }
+
+#guides-link {
+  text-decoration: none;
+  color: #3f51b5;
+  position: relative;
+}
+
+#guides-link::before {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #3f51b5;
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+}
+
+#guides-link:hover::before {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}

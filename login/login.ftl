@@ -9,7 +9,7 @@
                 <!-- headline -->
                 <div class="login-headline">
 					<h1 class="mdc-typography mdc-typography--headline4">新华开发平台</h1>
-                    <h3 id="login-message" class="mdc-typography mdc-typography--subtitle1">没有平台帐号？请<a href="//xinhua.dev/guides/">查看这里</a>。</h3>
+                    <h3 id="login-message" class="mdc-typography mdc-typography--subtitle1">没有平台帐号？请 <a id="guides-link" href="//xinhua.dev/guides/">查看这里</a></h3>
                 </div>
                 
                 <div class="${properties.kcFormGroupClass!} mdc-text-field mdc-text-field--outlined login-field">
