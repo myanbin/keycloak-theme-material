@@ -7,7 +7,7 @@
         <form id="kc-reset-password-form" class="${properties.kcFormClass!}" action="${url.loginAction}" method="post">
             <div class="login-headline">
                 <h1 class="mdc-typography mdc-typography--headline4">忘记密码</h1>
-                <h3 id="login-message" class="mdc-typography mdc-typography--subtitle1">请输入您想要找回的 DevPass 帐号</h3>
+                <h3 id="login-message" class="mdc-typography mdc-typography--subtitle1">请输入您想要找回的平台帐号</h3>
             </div>
             
             <div class="${properties.kcFormGroupClass!} mdc-text-field mdc-text-field--outlined login-field">
