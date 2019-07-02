@@ -8,8 +8,11 @@
             <form id="kc-form-login" onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
                 <!-- headline -->
                 <div class="login-headline">
-					<h1 class="mdc-typography mdc-typography--headline4">新华开发平台</h1>
-                    <h3 id="login-message" class="mdc-typography mdc-typography--subtitle1">没有平台帐号？请 <a id="guides-link" href="//xinhua.dev/guides/">查看这里</a></h3>
+					<h1 class="mdc-typography mdc-typography--headline4">
+                        <ruby>新华开发<rt>XINHUA.DEV</rt>平台</ruby>
+                    </h1>
+                    <h2 id="subline" class="mdc-typography mdc-typography--headline6">（技术局代码管理平台）</h2>
+                    <h3 id="login-message" class="mdc-typography mdc-typography--subtitle1">您还没有平台帐号？请 <a id="guides-link" href="//xinhua.dev/guides/">查看这里</a> 了解如何开通</h3>
                 </div>
                 
                 <div class="${properties.kcFormGroupClass!} mdc-text-field mdc-text-field--outlined login-field">

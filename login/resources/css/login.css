@@ -80,6 +80,11 @@ body {
   color: #388e3c;
 }
 
+#subline {
+  margin-top: -18px;
+  color: #666;
+}
+
 #guides-link {
   text-decoration: none;
   color: #3f51b5;

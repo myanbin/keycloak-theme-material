@@ -1,9 +1,5 @@
 console.log("%cIt works!", "color: green; font-size: 4em;");
 
-const wrap = document.querySelector('.login-container');
-
-wrap && wrap.click();
-
 /**
  * TODO: 重新部署时注意域名是否正确
  */
